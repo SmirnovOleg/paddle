@@ -44,7 +44,7 @@ object GlobalCacheRepository {
         PyLocations.packagesDir.deepResolve(
             pkg.repo.cacheFileName,
             pkg.name,
-            pkg.version
+            pkg.version.presentableText
         )
 
     fun findPackage(pkg: PyPackage, project: PaddleProject): CachedPyPackage {
